@@ -1,8 +1,22 @@
-/* window.onload = function () { */
-const lienzo = document.querySelectorAll("#lienzo");
-const ctx = lienzo.getContext("2d");
+const lienzo = document.getElementById("lienzo");
+lienzo.width = 800;
+lienzo.height = 600;
 
-lienzo.beginPath();
-ctx.rect(0, 0, 100, 150);
-ctx.strokeStyle("#6f00ff");
-ctx.stroke();
+if (lienzo.getContext) {
+  const ctx = lienzo.getContext("2d");
+
+  ctx.fillStyle = "#5900ff";
+  ctx.fillRect(0, 420, 800, 180);
+
+  let img = new Image();
+  img.src = "./inicio.webp";
+  img.onload = function () {
+    ctx.drawImage(img, 171, 80, 458, 443);
+  };
+} else {
+  alert("Not supported");
+}
+
+function newGame() {
+  draw();
+}
