@@ -9,7 +9,7 @@ if (lienzo.getContext) {
   ctx.fillRect(0, 420, 800, 180);
 
   let img = new Image();
-  img.src = "./inicio.webp";
+  img.src = "inicio.webp";
   img.onload = function () {
     ctx.drawImage(img, 171, 80, 458, 443);
   };
