@@ -7,6 +7,7 @@ window.onload = () => {
   ctx.fillStyle = "#5900ff";
   ctx.fillRect(0, 420, 800, 180);
 
+<<<<<<< HEAD
   const ilus = [
     { src: "../inicio.webp", x: 171, y: 80, width: 458, height: 443 },
     { src: "../recursos/hover-c.svg", x: 460, y: 225, width: 50, height: 60 },
@@ -14,6 +15,16 @@ window.onload = () => {
     { src: "../recursos/hover-b.svg", x: 200, y: 265, width: 140, height: 80 },
     { src: "../recursos/hover-d.svg", x: 400, y: 310, width: 170, height: 125 },
   ];
+=======
+  let img = new Image();
+  img.src = "inicio.webp";
+  img.onload = function () {
+    ctx.drawImage(img, 171, 80, 458, 443);
+  };
+} else {
+  alert("Not supported");
+}
+>>>>>>> 93169a972bee70332714068c7103802be7c19a28
 
   function illustrations() {
     ilus.forEach((ilu) => {
